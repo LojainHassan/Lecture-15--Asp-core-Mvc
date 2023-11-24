@@ -1,5 +1,5 @@
 ﻿Hello to my simple app 
-Here is a basic notes to keep remember what we do  in this project
+Here is a basic notes to keep remember what we did in this project
 1.controller with action method to return specific view 
 2.return View(we can  load Model data here  )
 3. to transfer data from view to action method in controller 
