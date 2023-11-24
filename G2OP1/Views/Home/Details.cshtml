@@ -1,0 +1,21 @@
+﻿@model Employee
+
+
+
+<div class="card text-center">
+    <div class="card-header">
+        @{
+            var fullName =$" welcome {@Model.FirstName}  {@Model.LatName}";
+
+        }
+
+            @fullName
+       
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Model.Age years old</h5>
+        <p class="card-text">He Lives in : @Model.City and Enter on @Model.RegisterDate</p>
+        <a asp-controller="Home" asp-action="AllEmployee" class="btn btn-primary">Back</a>
+    </div>
+    
+</div>

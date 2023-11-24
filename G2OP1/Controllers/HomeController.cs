@@ -57,5 +57,14 @@ namespace G2OP1.Controllers
         }
 
 
+        public IActionResult Details(int id)
+        {
+            var ob = (from em in emp
+                     where id == em.Id
+                     select em).SingleOrDefault();
+            return View(ob);
+        }
+
+
     }
 }

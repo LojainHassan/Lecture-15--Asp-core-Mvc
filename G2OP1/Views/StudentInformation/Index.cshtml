@@ -1,0 +1,31 @@
+﻿@using G2OP1.Models.Student;
+@model IEnumerable<Student>
+<h1>Our Employee</h1>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(x=>x.StudentId)</th>
+            <th scope="col">@Html.DisplayNameFor(x=>x.StudentName)</th>
+            <th scope="col">@Html.DisplayNameFor(x=>x.StudentAge)</th>
+            <th scope="col">@Html.DisplayNameFor(x=>x.City)</th>
+            <th scope="col">@Html.DisplayNameFor(x=>x.Email)</th>
+            <th scope="col">Details</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.StudentId</th>
+                <td>@item.StudentName</td>
+                <td>@item.StudentAge</td>
+                <td>@item.City</td>
+                <td>@item.Email</td>
+                <td><a class="btn btn-primary btn-sm" asp-controller="" asp-action="">More Detailes</a></td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
