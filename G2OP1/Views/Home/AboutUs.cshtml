@@ -1,0 +1,26 @@
+﻿
+<a class="btn btn-primary" asp-action="Index" asp-controller="Home">
+    Return to home
+</a>
+<hr class="border-secondary" />
+<div class="row">
+
+
+@{
+    for(int i = 1; i <= 10; i++)
+    {
+        if(i%2==0)
+        {
+            <span class="alert  alert-danger">Even =  @i @ViewBag.MyName</span>
+
+        }
+        else
+        {
+            <span class="alert alert-primary">Odd = @i @ViewBag.TrainingName</span>
+        }  
+
+    }
+}
+</div>
+
+<p class="alert-dark">@ViewData["DateToday"]</p>
