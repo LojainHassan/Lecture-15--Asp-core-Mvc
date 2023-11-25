@@ -11,6 +11,6 @@ IEnumerable : it cant update or modify it
 5. @foreach(var item in Model) we use (Model) capital letter to itreat data 
 
 we continue in lecture 16 :
-1- I create asp-route-id ( attribute assigned to <a> tag ) to make action method accept this attribute
+1- I created asp-route-id ( attribute assigned to <a> tag ) to make action method accept this attribute
          <td><a class="btn btn-primary" asp-action="Details" asp-controller="Home" 
                     asp-route-id="@item.Id">Detailes</a></td>

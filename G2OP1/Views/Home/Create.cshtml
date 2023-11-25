@@ -1,0 +1,65 @@
+﻿@model Employee
+
+<form method="post" asp-action="Create">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td>
+                <label asp-for="Id">Employee Id</label>
+            </td>
+            <td>
+                <input asp-for="Id" class="form-control" />
+            </td>
+
+        </tr>
+
+        <tr>
+            <td><label asp-for="FirstName">First Name</label></td>
+            <td> <input asp-for="FirstName" class="form-control" /></td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <label asp-for="LatName">LatName</label>
+            </td>
+
+            <td>
+                <input asp-for="LatName" class="form-control" />
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <label asp-for="City">City</label>
+            </td>
+            <td>
+                <input asp-for="City" class="form-control" />
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <label asp-for="Age">Age</label>
+            </td>
+            <td> <input asp-for="Age" class="form-control" /></td>
+
+        </tr>
+
+        <tr>
+            <td><label asp-for="RegisterDate">Register Date</label></td>
+            <td> <input asp-for="RegisterDate" class="form-control" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="name" value="save" class="btn btn-primary" />
+                <a class="btn btn-warning" asp-action="AllEmployee" asp-controller="Home">Cancel</a>
+            </td>
+
+        </tr>
+    </table>
+
+</form>

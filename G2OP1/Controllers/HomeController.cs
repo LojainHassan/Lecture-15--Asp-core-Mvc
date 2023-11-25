@@ -4,7 +4,7 @@ namespace G2OP1.Controllers
 {
     public class HomeController : Controller
     {
-        IList<Employee> emp= new List<Employee>
+       static IList<Employee> emp= new List<Employee>
         {
             new Employee {Id=1,
                 FirstName="Lojain",
@@ -63,6 +63,26 @@ namespace G2OP1.Controllers
                      where id == em.Id
                      select em).SingleOrDefault();
             return View(ob);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Employee employee)
+        {
+            emp.Add(employee);
+            return RedirectToAction("AllEmployee");
+        }
+
+       
+        public IActionResult Delete(int id)
+        {
+            Employee item = emp.First(c => c.Id == id);
+            emp.Remove(item);
+            return RedirectToAction("AllEmployee");
         }
 
 
