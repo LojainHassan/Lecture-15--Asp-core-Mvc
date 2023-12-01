@@ -1,0 +1,43 @@
+﻿@using G2OP1.Models.User;
+@model User
+
+<h1>Register</h1>
+<form method="post" asp-action="Register">
+
+    <table class="table table-bordered">
+        <tr>
+            <td>@Html.DisplayNameFor(c=>c.UserName)</td>
+            <td>
+                <input asp-for="UserName" class="form-control"
+                       placeholder="Please Enter your userName" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>@Html.DisplayNameFor(c=>c.PassWord)</td>
+            <td>
+                <input asp-for="PassWord" class="form-control"
+                       placeholder="Please Enter your PassWord" type="password" />
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>@Html.DisplayNameFor(c=>c.Email)</td>
+            <td>
+                <input asp-for="Email" class="form-control"
+                       placeholder="Please Enter your Email" type="email" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Register" class="btn btn-success" />
+                <a class="btn btn-danger" asp-action="Index" asp-controller="StudentInformation">Cancel</a>
+
+            </td>
+        </tr>
+
+
+    </table>
+</form>
+
